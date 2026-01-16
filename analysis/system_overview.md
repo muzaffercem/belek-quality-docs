@@ -1,36 +1,74 @@
-# System Overview
+# Sistem Genel Bakış (System Overview)
 
-## Project Name
-Belek Quality Management and Survey System
+## Proje Adı
+Belek Üniversitesi Web Tabanlı Kalite ve Anket Yönetim Sistemi
 
-## Purpose
-This system is designed to collect, manage, and analyze quality-related
-surveys within the Belek University ecosystem. It aims to support
-continuous improvement by gathering structured feedback from students,
-academic staff, administrative personnel, and external participants.
+## Amaç
+Bu sistem, Belek Üniversitesi bünyesinde yürütülen kalite güvence
+süreçlerini desteklemek amacıyla geliştirilmiştir. Sistem; öğrenci,
+akademik personel, idari personel, mezunlar ve dış paydaşlardan alınan
+geri bildirimlerin dijital ortamda toplanmasını, analiz edilmesini ve
+raporlanmasını hedeflemektedir.
 
-The system also provides administrative tools for managing surveys and
-leverages AI-based analysis to extract meaningful insights from responses.
-
----
-
-## System Scope
-
-The system covers the following functional areas:
-
-- User and role management
-- Survey creation and lifecycle management
-- Question and option management
-- Survey response collection
-- Reporting and analytics
-- AI-powered sentiment and summary analysis
-- Web, mobile, and admin access channels
+Ayrıca sistem, açık uçlu anket cevaplarının yapay zeka destekli analizini
+yaparak yöneticilere özet ve içgörü sunmayı amaçlamaktadır.
 
 ---
 
-## User Types
+## Sistem Kapsamı
 
-The system supports multiple user types:
+Sistem aşağıdaki temel işlevleri kapsamaktadır:
 
-- **Students** – Participate in surveys
-- **Academic Staff** – Participate in surveys
+- Kullanıcı ve rol yönetimi
+- Anket oluşturma, yayınlama ve yönetme
+- Soru ve seçenek yönetimi
+- Anket cevaplarının toplanması
+- Raporlama ve analiz işlemleri
+- Yapay zeka destekli duygu analizi ve özetleme
+- Web, mobil ve yönetici paneli üzerinden erişim
+
+---
+
+## Kullanıcı Türleri
+
+Sistem, farklı yetkilere sahip kullanıcı türlerini desteklemektedir:
+
+- **Öğrenciler** – Anketlere katılım sağlar
+- **Akademik Personel** – Anketlere katılım sağlar
+- **İdari Personel** – Anketlere katılım sağlar
+- **Mezunlar / Dış Paydaşlar** – Yetki verilmesi durumunda anketlere katılım sağlar
+- **Yöneticiler (Admin)** – Anket, kullanıcı ve rapor yönetimini gerçekleştirir
+
+---
+
+## Yüksek Seviyeli Mimari
+
+Sistem, çok katmanlı bir mimari yaklaşımı ile tasarlanmıştır:
+
+- **İstemci Katmanı**
+  - Web Uygulaması
+  - Mobil Uygulama
+  - Yönetici Paneli
+
+- **Sunucu Katmanı**
+  - RESTful API
+  - Kimlik doğrulama ve yetkilendirme
+  - İş mantığı katmanı
+  - Yapay zeka analiz servisleri
+
+- **Veri Katmanı**
+  - PostgreSQL ilişkisel veritabanı
+  - Normalize edilmiş tablo yapısı
+  - Performans için indeksler
+  - Raporlama için oluşturulmuş görünümler (View)
+
+Katmanlar birbirinden bağımsız olacak şekilde tasarlanmış olup, sistemin
+ölçeklenebilirliği ve sürdürülebilirliği hedeflenmiştir.
+
+---
+
+## Veri Yönetimi Yaklaşımı
+
+- İlişkisel veritabanı modeli kullanılmıştır
+- Tablolar arasında bütünlük foreign key kısıtları i
+
